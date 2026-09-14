@@ -1,0 +1,158 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+/* Heading */
+body > h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Pricing Container */
+.pricing-container {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+}
+
+/* Pricing Cards */
+.pricing-card {
+    flex: 1;
+
+    min-height: 400px;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    /* Fade-in animation */
+    animation: fadeIn 1s ease-in-out;
+
+    transition: transform 0.3s ease;
+}
+
+/* Middle card */
+.pricing-card.middle {
+    transform: scale(1.08);
+    background-color: #dff6ff;
+}
+
+/* Hover Effect */
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Middle card hover */
+.pricing-card.middle:hover {
+    transform: scale(1.08) translateY(-10px);
+}
+
+/* Card heading */
+.pricing-card h2 {
+    margin-bottom: 15px;
+}
+
+/* Price */
+.pricing-card h3 {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+/* Price duration */
+.pricing-card > p {
+    margin-bottom: 25px;
+}
+
+/* Features */
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.pricing-card li {
+    margin: 12px 0;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #333;
+    color: white;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 750px) {
+
+    .pricing-container {
+        flex-direction: column;
+    }
+
+    .pricing-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .pricing-card.middle {
+        transform: none;
+    }
+
+    .pricing-card.middle:hover {
+        transform: translateY(-10px);
+    }
+}

@@ -1,0 +1,140 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dashboard */
+.dashboard {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 80px 1fr;
+}
+
+/* Header */
+header {
+    grid-column: 1 / -1;
+
+    background-color: #333;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sidebar */
+aside {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+aside h2 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Sidebar Navigation */
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+aside nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+aside nav a:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    gap: 25px;
+}
+
+/* Boxes */
+.box {
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.box:hover {
+    transform: scale(1.05);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Box spanning two columns */
+.box5 {
+    grid-column: span 2;
+}
+
+.box h2 {
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+    }
+
+    header {
+        grid-column: 1;
+        padding: 20px;
+    }
+
+    aside {
+        padding: 20px;
+    }
+
+    aside nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 180px);
+    }
+
+    .box5 {
+        grid-column: span 1;
+    }
+}
