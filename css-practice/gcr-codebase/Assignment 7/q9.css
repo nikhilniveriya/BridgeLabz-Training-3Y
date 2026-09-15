@@ -1,0 +1,263 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f6f8;
+
+    color: #222;
+
+    line-height: 1.6;
+}
+
+
+/* Header */
+header {
+    text-align: center;
+
+    background-color: #263238;
+
+    color: white;
+
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+
+    font-size: 32px;
+}
+
+
+/*
+    Main section uses Flexbox
+    to center the form.
+*/
+main {
+    min-height: 75vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/*
+    Form container
+*/
+.form-section {
+    width: 90%;
+
+    max-width: 550px;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    /*
+        Subtle shadow gives the form
+        a clean depth effect.
+    */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.form-section h2 {
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+}
+
+
+/*
+    Form group provides uniform
+    spacing between elements.
+*/
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* Labels */
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #37474f;
+}
+
+
+/*
+    Common styling for input
+    and textarea elements.
+*/
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 2px solid #b0bec5;
+
+    border-radius: 8px;
+
+    background-color: #fafafa;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    /*
+        Smooth transition when
+        the element receives focus.
+    */
+    transition: all 0.3s ease;
+
+    resize: vertical;
+}
+
+
+/*
+    Different outline styles are
+    demonstrated using the default
+    input state.
+*/
+.form-group input {
+    outline: 2px solid transparent;
+
+    outline-offset: 3px;
+}
+
+.form-group textarea {
+    outline: 2px dashed transparent;
+
+    outline-offset: 4px;
+}
+
+
+/*
+    :focus selector
+
+    Changes border and outline when
+    the input is selected.
+*/
+.form-group input:focus {
+    border-color: #1976d2;
+
+    outline: 2px solid #42a5f5;
+
+    outline-offset: 3px;
+
+    background-color: white;
+
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.25);
+}
+
+
+/*
+    Textarea gets a different outline
+    style on focus.
+*/
+.form-group textarea:focus {
+    border-color: #7b1fa2;
+
+    outline: 2px dashed #ab47bc;
+
+    outline-offset: 5px;
+
+    background-color: white;
+
+    box-shadow: 0 0 8px rgba(123, 31, 162, 0.25);
+}
+
+
+/* Placeholder styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #78909c;
+}
+
+
+/*
+    Submit button
+*/
+button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 2px solid #263238;
+
+    border-radius: 8px;
+
+    background-color: #263238;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Button hover effect */
+button:hover {
+    background-color: #455a64;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+
+    background-color: #263238;
+
+    color: white;
+
+    padding: 18px;
+}
+
+
+/*
+    Responsive design
+*/
+@media (max-width: 700px) {
+
+    .form-section {
+        width: 95%;
+
+        padding: 25px 20px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .form-section h2 {
+        font-size: 24px;
+    }
+}

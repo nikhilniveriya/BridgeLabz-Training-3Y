@@ -1,0 +1,191 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/*
+    Main section uses Flexbox to arrange
+    all cards in a single row.
+*/
+main {
+    min-height: 75vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+/* Card container */
+.cards-container {
+    width: 100%;
+    max-width: 1100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 30px;
+}
+
+/*
+    Common styling for all cards.
+*/
+.card {
+    flex: 1;
+    max-width: 320px;
+
+    background-color: white;
+
+    padding: 35px 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    /*
+        Transition makes the hover
+        animation smooth.
+    */
+    transition: all 0.4s ease;
+}
+
+/*
+    CARD 1
+    A soft and subtle shadow.
+*/
+.card-one {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/*
+    CARD 2
+    A stronger shadow with more blur.
+*/
+.card-two {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/*
+    CARD 3
+    Multiple shadows create a layered
+    depth effect.
+*/
+.card-three {
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.15),
+        0 15px 30px rgba(0, 0, 0, 0.20);
+}
+
+/*
+    Number/icon at the top of each card.
+*/
+.icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: #37474f;
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*
+    Heading uses text-shadow to create
+    a depth effect on the text.
+*/
+.card h2 {
+    margin-bottom: 15px;
+
+    font-size: 24px;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Card paragraph */
+.card p {
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/*
+    HOVER EFFECT
+
+    The card moves upward using translateY()
+    and gets a larger shadow.
+*/
+.card:hover {
+    transform: translateY(-12px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.25),
+        0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+
+    background-color: #263238;
+    color: white;
+
+    padding: 18px;
+}
+
+/*
+    Responsive design:
+    Cards become vertically stacked
+    on smaller screens.
+*/
+@media (max-width: 700px) {
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,296 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+
+    /*
+        line-height improves readability
+        throughout the webpage.
+    */
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    text-align: center;
+
+    background-color: #263238;
+    color: white;
+
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+
+/* Main content */
+main {
+    display: flex;
+    justify-content: center;
+
+    padding: 50px 20px;
+}
+
+
+/*
+    Article container
+*/
+.article {
+    width: 90%;
+    max-width: 850px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Main article heading */
+.article h2 {
+    font-size: 32px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    letter-spacing: 1px;
+}
+
+
+/* Subheadings */
+.article h3 {
+    font-size: 24px;
+
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+    color: #37474f;
+}
+
+
+/*
+    INTRODUCTION PARAGRAPH
+
+    This paragraph demonstrates:
+    ::first-letter
+    ::first-line
+*/
+
+/*
+    ::first-letter
+
+    Makes the first letter larger and bold.
+*/
+.intro::first-letter {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+/*
+    ::first-line
+
+    Styles only the first line of the paragraph.
+*/
+.intro::first-line {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/*
+    SERIF FONT
+
+    Georgia is a serif font.
+*/
+.serif-text {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/*
+    SANS-SERIF FONT
+
+    Arial is a sans-serif font.
+*/
+.sans-text {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/*
+    MONOSPACE FONT
+
+    Consolas is a monospace font.
+*/
+.mono-text {
+    font-family: Consolas, "Courier New", monospace;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* Light font weight */
+.light-text {
+    font-size: 16px;
+    font-weight: 300;
+
+    margin-bottom: 10px;
+}
+
+
+/* Normal font weight */
+.normal-text {
+    font-size: 18px;
+    font-weight: 400;
+
+    margin-bottom: 10px;
+}
+
+
+/* Bold font weight */
+.bold-text {
+    font-size: 22px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+
+/*
+    STRONG ELEMENT
+
+    Custom styling for important text.
+*/
+.styled-text strong {
+    color: #c62828;
+    font-weight: 700;
+}
+
+
+/*
+    EM ELEMENT
+
+    Custom styling for emphasized text.
+*/
+.styled-text em {
+    color: #6a1b9a;
+    font-style: italic;
+}
+
+
+/*
+    MARK ELEMENT
+
+    Custom styling for highlighted text.
+*/
+.styled-text mark {
+    background-color: #ffe082;
+    color: #222;
+
+    padding: 2px 5px;
+
+    border-radius: 3px;
+}
+
+
+/*
+    TEXT ALIGNMENT
+
+    text-align controls horizontal
+    alignment of text.
+*/
+.alignment-text {
+    text-align: justify;
+
+    /*
+        letter-spacing controls the
+        space between individual letters.
+    */
+    letter-spacing: 0.5px;
+
+    /*
+        line-height controls the vertical
+        distance between lines.
+    */
+    line-height: 1.9;
+
+    font-size: 17px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+
+    background-color: #263238;
+    color: white;
+
+    padding: 18px;
+}
+
+
+/* Responsive design */
+@media (max-width: 700px) {
+
+    .article {
+        width: 95%;
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .article h2 {
+        font-size: 27px;
+    }
+
+    .article h3 {
+        font-size: 21px;
+    }
+
+    .serif-text,
+    .sans-text {
+        font-size: 16px;
+    }
+
+    .mono-text {
+        font-size: 14px;
+    }
+}

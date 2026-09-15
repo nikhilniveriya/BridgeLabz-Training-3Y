@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Advanced CSS Selectors</title>
+
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="q5.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Advanced CSS Selectors</h1>
+        <p>Attribute selectors, pseudo-classes, pseudo-elements and combinators</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Attribute Selectors Section -->
+        <section class="selector-section">
+
+            <h2>Attribute Selectors</h2>
+
+            <!-- [type="text"] selector -->
+            <input
+                type="text"
+                placeholder="Text input using [type='text']"
+            >
+
+            <input
+                type="email"
+                placeholder="Email input"
+            >
+
+            <!-- [href^="https"] selector -->
+            <div class="links">
+                <a href="https://www.google.com">
+                    Secure HTTPS Link
+                </a>
+
+                <a href="http://example.com">
+                    Normal HTTP Link
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Pseudo Classes Section -->
+        <section class="selector-section">
+
+            <h2>Pseudo-Classes</h2>
+
+            <ul class="items">
+                <li>Item One</li>
+                <li>Item Two</li>
+                <li>Item Three</li>
+                <li>Item Four</li>
+                <li>Item Five</li>
+            </ul>
+
+            <button>Hover Over Me</button>
+
+            <input
+                type="text"
+                class="focus-input"
+                placeholder="Click here to test :focus"
+            >
+
+        </section>
+
+        <!-- Combinators Section -->
+        <section class="selector-section combinator-section">
+
+            <h2>CSS Combinators</h2>
+
+            <div class="parent">
+
+                <p>Direct child paragraph</p>
+
+                <div class="child-box">
+                    <p>Nested paragraph</p>
+                </div>
+
+                <p>Paragraph after child box</p>
+
+                <p>Another paragraph</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Advanced CSS Selectors Practice</p>
+    </footer>
+
+</body>
+</html>

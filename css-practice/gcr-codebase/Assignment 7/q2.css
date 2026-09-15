@@ -1,0 +1,182 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/*
+    Main section uses Flexbox to center
+    the boxes horizontally and vertically.
+*/
+main {
+    min-height: 75vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+/*
+    Container for all three boxes.
+    Flexbox keeps the boxes in a row.
+*/
+.box-container {
+    width: 100%;
+    max-width: 1100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+}
+
+/* Common styling for all boxes */
+.box {
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*
+        Minimum height ensures that the box
+        never becomes smaller than this value.
+    */
+    min-height: 180px;
+}
+
+/*
+    BOX 1
+    Width and height are given in pixels.
+*/
+.box-one {
+    width: 220px;
+    height: 180px;
+
+    background-color: #90caf9;
+    border: 4px solid #1976d2;
+}
+
+/*
+    BOX 2
+    Width uses percentage.
+    Height uses em units.
+
+    1em depends on the element's font size.
+*/
+.box-two {
+    width: 30%;
+    height: 15em;
+
+    background-color: #a5d6a7;
+    border: 4px solid #388e3c;
+
+    /*
+        max-width prevents the box from
+        becoming too wide.
+    */
+    max-width: 320px;
+}
+
+/*
+    BOX 3
+    Width uses vw.
+    Height uses vh.
+*/
+.box-three {
+    width: 25vw;
+    height: 30vh;
+
+    background-color: #ffcc80;
+    border: 4px solid #f57c00;
+
+    /*
+        Overflow controls content that
+        exceeds the defined box size.
+    */
+    overflow: auto;
+
+    /*
+        Maximum width keeps the box
+        within a reasonable size.
+    */
+    max-width: 300px;
+}
+
+/* Box headings */
+.box h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Box paragraphs */
+.box p {
+    line-height: 1.6;
+}
+
+/* Extra content used for overflow demonstration */
+.extra-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 18px;
+}
+
+/*
+    Responsive design:
+    On smaller screens the boxes
+    are stacked vertically.
+*/
+@media (max-width: 700px) {
+
+    .box-container {
+        flex-direction: column;
+    }
+
+    .box-one,
+    .box-two,
+    .box-three {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .box-three {
+        height: 250px;
+    }
+}

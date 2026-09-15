@@ -1,0 +1,141 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/* Main section */
+main {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/*
+    Flexbox is used to align all boxes
+    horizontally.
+*/
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+/* Common styling for all boxes */
+.box {
+    width: 200px;
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    text-align: center;
+
+    /* Smooth border-color transition */
+    transition: border-color 0.3s ease;
+}
+
+/* Solid border example */
+.solid-box {
+    border: 5px solid #2196f3;
+    padding: 20px;
+}
+
+/* Dashed border example */
+.dashed-box {
+    border: 5px dashed #4caf50;
+    padding: 30px;
+}
+
+/* Double border example */
+.double-box {
+    border: 7px double #e91e63;
+    padding: 15px;
+}
+
+/* Groove border example */
+.groove-box {
+    border: 8px groove #ff9800;
+    padding: 25px;
+}
+
+/* Rounded corner example */
+.rounded-box {
+    border: 5px solid #673ab7;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+/* Heading inside boxes */
+.box h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Paragraph inside boxes */
+.box p {
+    font-size: 14px;
+}
+
+/*
+    Hover effect:
+    Border color changes smoothly
+    when the mouse is placed over a box.
+*/
+.box:hover {
+    border-color: #000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    padding: 18px;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+        max-width: 300px;
+    }
+}

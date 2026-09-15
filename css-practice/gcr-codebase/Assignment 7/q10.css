@@ -1,0 +1,283 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f6f8;
+
+    color: #222;
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+header {
+    text-align: center;
+
+    background-color: #263238;
+
+    color: white;
+
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   NAVIGATION BAR
+   ===================================================== */
+
+.navbar {
+    background-color: #37474f;
+
+    /*
+        Border at the bottom of the
+        navigation bar.
+    */
+    border-bottom: 3px solid #90a4ae;
+}
+
+
+/*
+    Remove default list bullets and use
+    Flexbox to create a horizontal navbar.
+*/
+.navbar ul {
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/*
+    Each list item contains one link.
+*/
+.navbar li {
+    display: flex;
+}
+
+
+/*
+    Navigation links
+*/
+.navbar a {
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    /*
+        Padding creates space around
+        each navigation link.
+    */
+    padding: 16px 25px;
+
+    /*
+        Borders separate the links.
+    */
+    border-right: 1px solid #607d8b;
+
+    /*
+        Required smooth transition.
+    */
+    transition: all 0.3s ease;
+}
+
+
+/*
+    Remove border from the last link.
+*/
+.navbar li:last-child a {
+    border-right: none;
+}
+
+
+/* =====================================================
+   HOVER EFFECT
+   ===================================================== */
+
+/*
+    When the mouse moves over a link,
+    its background and text change.
+*/
+.navbar a:hover {
+    background-color: #90a4ae;
+
+    color: #263238;
+}
+
+
+/* =====================================================
+   ACTIVE LINK
+   ===================================================== */
+
+/*
+    The active link is visually highlighted
+    with a different background and underline.
+*/
+.navbar a.active {
+    background-color: #1565c0;
+
+    color: white;
+
+    box-shadow: inset 0 -4px 0 #90caf9;
+}
+
+
+/*
+    Active link also changes slightly
+    when hovered.
+*/
+.navbar a.active:hover {
+    background-color: #1976d2;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+
+main {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* Hero content */
+.hero {
+    width: 90%;
+
+    max-width: 750px;
+
+    padding: 50px 35px;
+
+    background-color: white;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Hero heading */
+.hero h2 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+    color: #263238;
+}
+
+
+/* Hero paragraphs */
+.hero p {
+    font-size: 17px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    text-align: center;
+
+    background-color: #263238;
+
+    color: white;
+
+    padding: 18px;
+}
+
+
+/* =====================================================
+   RESPONSIVE NAVIGATION
+   ===================================================== */
+
+/*
+    Below 700px the navigation links
+    are stacked vertically.
+*/
+@media (max-width: 700px) {
+
+    .navbar ul {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .navbar li {
+        width: 100%;
+    }
+
+    .navbar a {
+        width: 100%;
+
+        text-align: center;
+
+        border-right: none;
+
+        border-bottom: 1px solid #607d8b;
+    }
+
+    /*
+        Remove bottom border from
+        the last navigation link.
+    */
+    .navbar li:last-child a {
+        border-bottom: none;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .hero {
+        padding: 35px 20px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+}

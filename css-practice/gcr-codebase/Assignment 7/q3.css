@@ -1,0 +1,204 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+/*
+    Fixed header:
+    It stays at the top even when
+    the page is scrolled.
+*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: #263238;
+    color: white;
+
+    text-align: center;
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+/*
+    Main content is given top and bottom
+    spacing because the header and footer
+    are fixed.
+*/
+main {
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+
+/*
+    Common styling for gradient sections.
+*/
+.gradient-section {
+    min-height: 75vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+/*
+    LINEAR GRADIENT
+
+    The colors smoothly change from
+    left to right.
+*/
+.linear-section {
+    background: linear-gradient(
+        135deg,
+        #1565c0,
+        #42a5f5,
+        #90caf9
+    );
+
+    /*
+        Fixed background creates a
+        parallax-like visual effect.
+    */
+    background-attachment: fixed;
+}
+
+/*
+    RADIAL GRADIENT
+
+    The colors spread outward from
+    the center point.
+*/
+.radial-section {
+    background: radial-gradient(
+        circle,
+        #8e24aa,
+        #5e35b1,
+        #311b92
+    );
+}
+
+/* Content box inside gradient sections */
+.content {
+    width: 90%;
+    max-width: 700px;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background-color: rgba(0, 0, 0, 0.25);
+
+    border-radius: 15px;
+}
+
+/* Section headings */
+.content h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+/* Section paragraphs */
+.content p {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/*
+    Additional information section.
+*/
+.info-section {
+    min-height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background-color: #37474f;
+}
+
+.info-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    max-width: 700px;
+    font-size: 18px;
+}
+
+/*
+    Fixed footer:
+    It stays at the bottom of the screen.
+*/
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: #263238;
+    color: white;
+
+    text-align: center;
+    padding: 15px;
+
+    z-index: 1000;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .gradient-section {
+        min-height: 70vh;
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    .content h2 {
+        font-size: 27px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    /*
+        Fixed background can behave differently
+        on some mobile browsers, so normal
+        scrolling is used on small screens.
+    */
+    .linear-section {
+        background-attachment: scroll;
+    }
+}

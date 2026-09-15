@@ -1,0 +1,287 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+
+    background-color: #263238;
+    color: white;
+
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+
+/* Main content */
+main {
+    padding: 40px 20px;
+}
+
+
+/*
+    BOX MODEL SECTION
+*/
+.model-section {
+    max-width: 900px;
+
+    margin: 0 auto 40px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.model-section h2,
+.sizing-section h2 {
+    margin-bottom: 30px;
+}
+
+
+/*
+    MARGIN LAYER
+
+    The outermost layer represents margin.
+*/
+.margin-layer {
+    width: 450px;
+    max-width: 90%;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    /*
+        Outline is used so that the margin
+        area can be visually identified.
+    */
+    outline: 3px dashed #ef6c00;
+
+    background-color: #ffe0b2;
+}
+
+
+/*
+    BORDER LAYER
+
+    This layer represents the border
+    surrounding the padding and content.
+*/
+.border-layer {
+    padding: 20px;
+
+    border: 12px solid #1565c0;
+
+    background-color: #bbdefb;
+}
+
+
+/*
+    PADDING LAYER
+
+    Padding creates space around content.
+*/
+.padding-layer {
+    padding: 30px;
+
+    background-color: #c8e6c9;
+}
+
+
+/*
+    CONTENT LAYER
+
+    This is the actual content area.
+*/
+.content-layer {
+    padding: 30px;
+
+    background-color: #fff59d;
+
+    border: 2px solid #555;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/*
+    DESCRIPTION SECTION
+*/
+.description {
+    margin-top: 40px;
+
+    text-align: left;
+
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description p {
+    margin-bottom: 12px;
+}
+
+
+/*
+    BOX SIZING SECTION
+*/
+.sizing-section {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+
+/*
+    Flexbox arranges both comparison
+    boxes horizontally.
+*/
+.comparison {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/*
+    Common styling for comparison boxes.
+*/
+.size-box {
+    width: 300px;
+    height: 220px;
+
+    padding: 30px;
+
+    border: 10px solid #37474f;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+    DEFAULT BOX MODEL
+
+    content-box is the default value.
+
+    The declared width represents only
+    the content width.
+
+    Padding and border are added outside it.
+*/
+.content-box {
+    box-sizing: content-box;
+
+    background-color: #ffccbc;
+}
+
+
+/*
+    BORDER-BOX MODEL
+
+    With border-box, the declared width
+    includes content + padding + border.
+*/
+.border-box {
+    box-sizing: border-box;
+
+    background-color: #b3e5fc;
+}
+
+
+/* Comparison headings */
+.size-box h3 {
+    margin-bottom: 15px;
+
+    font-size: 22px;
+}
+
+
+/* Comparison paragraphs */
+.size-box p {
+    font-size: 15px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+
+    background-color: #263238;
+    color: white;
+
+    padding: 18px;
+
+    margin-top: 40px;
+}
+
+
+/*
+    Responsive design
+*/
+@media (max-width: 700px) {
+
+    .model-section,
+    .sizing-section {
+        padding: 20px;
+    }
+
+    .margin-layer {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .border-layer {
+        padding: 15px;
+        border-width: 8px;
+    }
+
+    .padding-layer {
+        padding: 20px;
+    }
+
+    .content-layer {
+        padding: 20px;
+    }
+
+    .size-box {
+        width: 100%;
+        max-width: 300px;
+    }
+}
