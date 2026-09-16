@@ -1,0 +1,243 @@
+/* ========================================
+   General Page Styling
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #222;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+header {
+    background: #1e3a8a;
+    color: white;
+
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+
+/* ========================================
+   Main Section
+   ======================================== */
+
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* ========================================
+   Tooltip Container
+   ======================================== */
+
+.tooltip-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ========================================
+   Tooltip Box
+   ======================================== */
+
+.tooltip-box {
+    position: relative;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   Icons
+   ======================================== */
+
+.icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s ease;
+}
+
+
+/* Icon hover effect */
+
+.tooltip-box:hover .icon {
+    transform: scale(1.1);
+    background: #dbeafe;
+}
+
+
+/* ========================================
+   Word Example
+   ======================================== */
+
+.word {
+    background: white;
+
+    padding: 15px 25px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+
+.tooltip-box:hover .word {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* ========================================
+   Tooltip Text
+   ======================================== */
+
+.tooltip-text {
+    position: absolute;
+
+    /* Position tooltip above element */
+    bottom: calc(100% + 12px);
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #111827;
+    color: white;
+
+    padding: 8px 14px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    /* Initially hidden */
+    opacity: 0;
+
+    visibility: hidden;
+
+    /* Smooth fade effect */
+    transition: opacity 0.3s ease-in-out,
+                visibility 0.3s ease-in-out;
+}
+
+
+/* ========================================
+   Small Arrow Below Tooltip
+   ======================================== */
+
+.tooltip-text::after {
+    content: "";
+
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-width: 6px;
+    border-style: solid;
+
+    border-color: #111827 transparent transparent transparent;
+}
+
+
+/* ========================================
+   Show Tooltip on Hover
+   ======================================== */
+
+.tooltip-box:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    background: #111827;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .tooltip-container {
+        gap: 30px;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    .tooltip-text {
+        font-size: 13px;
+    }
+}

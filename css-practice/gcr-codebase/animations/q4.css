@@ -1,0 +1,267 @@
+/* ========================================
+   General Page Styling
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+    color: #222;
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+header {
+    background: #1e3a8a;
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   Main Content
+   ======================================== */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    flex: 1;
+}
+
+
+/* ========================================
+   Section Styling
+   ======================================== */
+
+.selector-section {
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.selector-section h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 18px;
+}
+
+
+/* ========================================
+   1. Element Selector
+   Targets all <p> elements
+   ======================================== */
+
+p {
+    margin-bottom: 10px;
+}
+
+
+/* ========================================
+   2. Class Selector
+   Targets elements having .highlight
+   ======================================== */
+
+.highlight {
+    background: #fef3c7;
+
+    border-left: 5px solid #f59e0b;
+
+    padding: 10px;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   3. ID Selector
+   Targets the element with #special-text
+   ======================================== */
+
+#special-text {
+    background: #dcfce7;
+
+    border: 2px solid #16a34a;
+
+    padding: 12px;
+
+    color: #166534;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   4. Attribute Selector
+   Targets links having target="_blank"
+   ======================================== */
+
+a[target="_blank"] {
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+}
+
+
+/* Attribute selector for title */
+
+a[title] {
+    background: #fce7f3;
+
+    color: #be185d;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+}
+
+
+/* ========================================
+   5. Descendant Combinator
+   Selects every <p> inside .descendant-box
+   ======================================== */
+
+.descendant-box p {
+    background: #e0e7ff;
+
+    padding: 10px;
+
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   Child Combinator >
+   Selects only direct child paragraphs
+   ======================================== */
+
+.child-box > p {
+    background: #cffafe;
+
+    padding: 10px;
+
+    border-left: 5px solid #0891b2;
+}
+
+
+/* ========================================
+   Adjacent Sibling +
+   Selects the <p> immediately after <h3>
+   ======================================== */
+
+.sibling-box h3 + p {
+    background: #fee2e2;
+
+    padding: 10px;
+
+    border-left: 5px solid #dc2626;
+}
+
+
+/* ========================================
+   General Sibling ~
+   Selects all <p> elements after <h3>
+   ======================================== */
+
+.general-sibling-box h3 ~ p {
+    background: #f3e8ff;
+
+    padding: 10px;
+
+    margin-bottom: 5px;
+
+    border-left: 5px solid #9333ea;
+}
+
+
+/* ========================================
+   List Styling
+   ======================================== */
+
+.selector-section ul {
+    padding-left: 25px;
+}
+
+
+/* Descendant selector:
+   targets li inside selector-section */
+
+.selector-section li {
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    .selector-section {
+        padding: 18px;
+    }
+
+    a {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+}

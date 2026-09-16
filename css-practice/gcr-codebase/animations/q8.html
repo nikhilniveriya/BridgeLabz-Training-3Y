@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Box-Sizing Comparison</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="q8.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Box-Sizing Comparison</h1>
+        <p>Understanding content-box and border-box</p>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <section class="comparison">
+
+            <!-- Content Box -->
+            <article class="box-card">
+
+                <h2>Default: content-box</h2>
+
+                <div class="content-box">
+                    Content Box
+                </div>
+
+                <p>
+                    With <strong>content-box</strong>, the specified
+                    width applies only to the content.
+                </p>
+
+                <p>
+                    Padding and border are added to the total width.
+                </p>
+
+            </article>
+
+
+            <!-- Border Box -->
+            <article class="box-card">
+
+                <h2>border-box</h2>
+
+                <div class="border-box">
+                    Border Box
+                </div>
+
+                <p>
+                    With <strong>border-box</strong>, the specified
+                    width includes content, padding, and border.
+                </p>
+
+                <p>
+                    This makes sizing easier and more predictable.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- Explanation -->
+        <section class="explanation">
+
+            <h2>What is the Difference?</h2>
+
+            <p>
+                Suppose both boxes have a width of 300px,
+                padding of 20px, and a 5px border.
+            </p>
+
+            <p>
+                In <strong>content-box</strong>, the padding and
+                border are added outside the 300px width.
+            </p>
+
+            <p>
+                In <strong>border-box</strong>, everything is included
+                inside the 300px width.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 CSS Box-Sizing Practice</p>
+    </footer>
+
+</body>
+</html>

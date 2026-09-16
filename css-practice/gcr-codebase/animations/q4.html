@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Selectors Practice</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="q4.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>CSS Selectors Practice</h1>
+        <p>Examples of different CSS selectors and combinators</p>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Element Selector -->
+        <section class="selector-section">
+
+            <h2>1. Element Selector</h2>
+
+            <p>
+                This paragraph is styled using an element selector.
+            </p>
+
+            <p>
+                Element selectors target HTML elements directly.
+            </p>
+
+        </section>
+
+
+        <!-- Class Selector -->
+        <section class="selector-section">
+
+            <h2>2. Class Selector</h2>
+
+            <p class="highlight">
+                This paragraph uses the .highlight class selector.
+            </p>
+
+            <p class="highlight">
+                Multiple elements can use the same class.
+            </p>
+
+        </section>
+
+
+        <!-- ID Selector -->
+        <section class="selector-section">
+
+            <h2>3. ID Selector</h2>
+
+            <p id="special-text">
+                This paragraph is styled using the #special-text ID selector.
+            </p>
+
+        </section>
+
+
+        <!-- Attribute Selector -->
+        <section class="selector-section">
+
+            <h2>4. Attribute Selector</h2>
+
+            <a href="https://example.com">
+                Normal Link
+            </a>
+
+            <a href="#" target="_blank">
+                Target Blank Link
+            </a>
+
+            <a href="#" title="Important Link">
+                Link With Title
+            </a>
+
+        </section>
+
+
+        <!-- Combinators -->
+        <section class="selector-section">
+
+            <h2>5. CSS Combinators</h2>
+
+            <!-- Descendant Combinator -->
+            <div class="descendant-box">
+
+                <p>
+                    This is a descendant paragraph.
+                </p>
+
+                <div>
+                    <p>
+                        This is a nested descendant paragraph.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Child Combinator -->
+            <div class="child-box">
+
+                <p>
+                    Direct child paragraph.
+                </p>
+
+                <div>
+                    <p>
+                        Nested paragraph.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Adjacent Sibling -->
+            <div class="sibling-box">
+
+                <h3>Heading</h3>
+
+                <p>
+                    This paragraph comes immediately after the heading.
+                </p>
+
+                <p>
+                    This paragraph is not an adjacent sibling.
+                </p>
+
+            </div>
+
+
+            <!-- General Sibling -->
+            <div class="general-sibling-box">
+
+                <h3>Heading</h3>
+
+                <p>
+                    First sibling paragraph.
+                </p>
+
+                <p>
+                    Second sibling paragraph.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- List Example -->
+        <section class="selector-section">
+
+            <h2>6. List Selectors</h2>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 CSS Selectors Practice</p>
+    </footer>
+
+</body>
+</html>

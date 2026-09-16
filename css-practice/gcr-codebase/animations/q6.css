@@ -1,0 +1,337 @@
+/* ========================================
+   General Page Styling
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+    color: #222;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+header {
+    background: #1e3a8a;
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   Main Content
+   ======================================== */
+
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* ========================================
+   Animation Container
+   ======================================== */
+
+.animation-container {
+    width: 100%;
+    max-width: 1100px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 25px;
+}
+
+
+/* ========================================
+   Animation Cards
+   ======================================== */
+
+.animation-card {
+    background: white;
+
+    width: 33.33%;
+
+    min-height: 350px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.animation-card h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 25px;
+}
+
+.animation-card p {
+    margin-top: auto;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   1. MOVING BOX
+   ======================================== */
+
+.box-area {
+    height: 120px;
+
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow: hidden;
+
+    border: 2px dashed #cbd5e1;
+
+    padding: 10px;
+}
+
+
+.moving-box {
+    width: 55px;
+    height: 55px;
+
+    background: #2563eb;
+
+    border-radius: 8px;
+
+    /* Animation settings */
+    animation-name: moveBox;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+
+    /* Runs 4 times */
+    animation-iteration-count: 4;
+
+    /* Moves forward and backward */
+    animation-direction: alternate;
+
+    /* Starts after 0.5 seconds */
+    animation-delay: 0.5s;
+}
+
+
+/* Keyframes for moving box */
+
+@keyframes moveBox {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(260px);
+    }
+}
+
+
+/* ========================================
+   2. BOUNCING BALL
+   ======================================== */
+
+.ball-area {
+    height: 150px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    border-bottom: 3px solid #334155;
+}
+
+
+.ball {
+    width: 55px;
+    height: 55px;
+
+    background: #dc2626;
+
+    border-radius: 50%;
+
+    /* Infinite bouncing animation */
+    animation-name: bounce;
+
+    animation-duration: 1.5s;
+
+    animation-timing-function: ease-in-out;
+
+    animation-iteration-count: infinite;
+
+    animation-direction: alternate;
+}
+
+
+/* Keyframes for bouncing ball */
+
+@keyframes bounce {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(90px);
+    }
+}
+
+
+/* ========================================
+   3. COLOR CHANGING TEXT
+   ======================================== */
+
+.text-area {
+    height: 150px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.animated-text {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    animation-name: colorChange;
+
+    animation-duration: 3s;
+
+    animation-timing-function: ease-in-out;
+
+    animation-iteration-count: infinite;
+
+    animation-direction: alternate;
+
+    animation-delay: 1s;
+}
+
+
+/* Keyframes for color changing text */
+
+@keyframes colorChange {
+
+    0% {
+        color: #2563eb;
+        transform: scale(1);
+    }
+
+    50% {
+        color: #16a34a;
+        transform: scale(1.15);
+    }
+
+    100% {
+        color: #dc2626;
+        transform: scale(1);
+    }
+}
+
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    .animation-container {
+        flex-wrap: wrap;
+    }
+
+    .animation-card {
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .animation-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animation-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .moving-box {
+        animation-name: mobileMoveBox;
+    }
+}
+
+
+/* Smaller movement for mobile screens */
+
+@keyframes mobileMoveBox {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(250px);
+    }
+}

@@ -1,0 +1,348 @@
+/* ========================================
+   General Styling
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    /* Soft background gradient */
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #f5d0fe
+    );
+
+    color: #222;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+header {
+    background: rgba(30, 58, 138, 0.95);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   Main
+   ======================================== */
+
+main {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* ========================================
+   UI Card
+   ======================================== */
+
+.ui-card {
+    width: 90%;
+    max-width: 550px;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.ui-card h2 {
+    text-align: center;
+
+    color: #1e3a8a;
+
+    font-size: 28px;
+}
+
+.description {
+    text-align: center;
+
+    color: #64748b;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   Search and Dropdown Containers
+   ======================================== */
+
+.search-container,
+.dropdown-container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+
+    color: #334155;
+}
+
+
+/* ========================================
+   Search Input
+   ======================================== */
+
+input[type="text"] {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 2px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+/* Focus effect */
+
+input[type="text"]:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px #bfdbfe;
+}
+
+
+/* ========================================
+   Dropdown
+   ======================================== */
+
+select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 2px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+/* Dropdown focus */
+
+select:focus {
+    border-color: #7c3aed;
+
+    box-shadow: 0 0 0 3px #ddd6fe;
+}
+
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.button-container {
+    display: flex;
+
+    gap: 15px;
+
+    justify-content: center;
+}
+
+
+.button-container button {
+    flex: 1;
+
+    padding: 13px 20px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ========================================
+   Primary Button
+   ======================================== */
+
+.primary-btn {
+    border: 2px solid #2563eb;
+
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* Hover effect */
+
+.primary-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Focus effect */
+
+.primary-btn:focus {
+    outline: 3px solid #93c5fd;
+
+    outline-offset: 2px;
+}
+
+
+/* ========================================
+   Secondary Button
+   ======================================== */
+
+.secondary-btn {
+    border: 2px solid #64748b;
+
+    background: white;
+
+    color: #334155;
+}
+
+
+/* Hover effect */
+
+.secondary-btn:hover {
+    background: #334155;
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Focus effect */
+
+.secondary-btn:focus {
+    outline: 3px solid #cbd5e1;
+
+    outline-offset: 2px;
+}
+
+
+/* ========================================
+   Information Box
+   ======================================== */
+
+.info-box {
+    background: #eff6ff;
+
+    border-left: 5px solid #2563eb;
+
+    padding: 15px;
+
+    border-radius: 6px;
+}
+
+.info-box h3 {
+    margin-bottom: 5px;
+
+    color: #1e3a8a;
+}
+
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .ui-card {
+        width: 100%;
+
+        padding: 25px 20px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,248 @@
+/* ========================================
+   General Page Styling
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+header {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+
+/* ========================================
+   Main Section
+   ======================================== */
+
+main {
+    flex: 1;
+    padding: 50px 20px;
+}
+
+
+/* ========================================
+   Flexbox Layout
+   ======================================== */
+
+.examples {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+}
+
+
+/* ========================================
+   Example Cards
+   ======================================== */
+
+.example-card {
+    background: white;
+    width: 25%;
+    min-height: 280px;
+
+    padding: 25px;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.example-card h2 {
+    color: #1e3a8a;
+    margin-bottom: 25px;
+}
+
+.example-card p {
+    margin-top: 25px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   :hover Example
+   ======================================== */
+
+.example-card a {
+    display: inline-block;
+
+    background: #2563eb;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 20px;
+    border-radius: 6px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Changes when mouse is over link */
+.example-card a:hover {
+    background: #dc2626;
+    transform: scale(1.08);
+}
+
+
+/* ========================================
+   :focus Example
+   ======================================== */
+
+.focus-btn {
+    padding: 12px 20px;
+
+    border: 2px solid #2563eb;
+    border-radius: 6px;
+
+    background: white;
+    color: #2563eb;
+
+    cursor: pointer;
+}
+
+
+/* Changes when button receives focus */
+.focus-btn:focus {
+    outline: 3px solid #93c5fd;
+    background: #2563eb;
+    color: white;
+}
+
+
+/* ========================================
+   :active Example
+   ======================================== */
+
+.active-btn {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #16a34a;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.1s;
+}
+
+
+/* Changes while button is being pressed */
+.active-btn:active {
+    background: #991b1b;
+    transform: scale(0.90);
+}
+
+
+/* ========================================
+   :nth-child() Example
+   ======================================== */
+
+.number-list {
+    list-style: none;
+    width: 100%;
+}
+
+.number-list li {
+    padding: 10px;
+    margin-bottom: 6px;
+
+    border-radius: 5px;
+    background: #e5e7eb;
+}
+
+
+/* Selects every odd item */
+.number-list li:nth-child(odd) {
+    background: #bfdbfe;
+}
+
+
+/* Selects every even item */
+.number-list li:nth-child(even) {
+    background: #bbf7d0;
+}
+
+
+/* Selects the third item specifically */
+.number-list li:nth-child(3) {
+    background: #fca5a5;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    background: #111827;
+    color: white;
+
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    .examples {
+        flex-wrap: wrap;
+    }
+
+    .example-card {
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .examples {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .example-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}

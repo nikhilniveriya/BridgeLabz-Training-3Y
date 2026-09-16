@@ -1,0 +1,445 @@
+/* ========================================
+   Global Styling
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ========================================
+   Body
+   ======================================== */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f1f5f9;
+
+    color: #1e293b;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+.site-header {
+    background: #1e3a8a;
+
+    color: white;
+
+    padding: 30px 20px;
+
+    text-align: center;
+}
+
+.site-header h1 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.site-header p {
+    font-size: 16px;
+
+    opacity: 0.9;
+}
+
+
+/* ========================================
+   Main
+   ======================================== */
+
+main {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* ========================================
+   Main Card
+   Flexbox is used for the layout
+   ======================================== */
+
+.main-card {
+    width: 100%;
+
+    max-width: 900px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+}
+
+
+/* ========================================
+   Image Section
+   ======================================== */
+
+.image-section {
+    width: 42%;
+
+    min-height: 500px;
+
+    overflow: hidden;
+}
+
+
+.image-section img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Image hover effect */
+
+.image-section:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   Content Section
+   ======================================== */
+
+.content-section {
+    width: 58%;
+
+    padding: 40px;
+}
+
+.content-section h2 {
+    color: #1e3a8a;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+
+.intro {
+    color: #64748b;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   Form
+   ======================================== */
+
+form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* ========================================
+   Form Groups
+   ======================================== */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group label {
+    font-weight: bold;
+
+    color: #334155;
+}
+
+
+/* ========================================
+   Input and Textarea
+   ======================================== */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 2px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #1e293b;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* ========================================
+   Focus Pseudo-Class
+   ======================================== */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+
+    background: #f8fafc;
+
+    box-shadow:
+        0 0 0 3px #bfdbfe;
+}
+
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.button-group {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 5px;
+}
+
+
+.button-group button {
+    flex: 1;
+
+    padding: 13px 20px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ========================================
+   Submit Button
+   ======================================== */
+
+.submit-btn {
+    background: #2563eb;
+
+    color: white;
+
+    border: 2px solid #2563eb;
+}
+
+
+/* Hover */
+
+.submit-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Active */
+
+.submit-btn:active {
+    transform: scale(0.96);
+}
+
+
+/* Focus */
+
+.submit-btn:focus {
+    outline: 3px solid #93c5fd;
+
+    outline-offset: 2px;
+}
+
+
+/* ========================================
+   Reset Button
+   ======================================== */
+
+.reset-btn {
+    background: white;
+
+    color: #475569;
+
+    border: 2px solid #94a3b8;
+}
+
+
+/* Hover */
+
+.reset-btn:hover {
+    background: #475569;
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Active */
+
+.reset-btn:active {
+    transform: scale(0.96);
+}
+
+
+/* Focus */
+
+.reset-btn:focus {
+    outline: 3px solid #cbd5e1;
+
+    outline-offset: 2px;
+}
+
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* ========================================
+   Tablet Responsive Design
+   ======================================== */
+
+@media (max-width: 800px) {
+
+    .main-card {
+        max-width: 650px;
+
+        flex-direction: column;
+    }
+
+
+    .image-section {
+        width: 100%;
+
+        min-height: 280px;
+
+        height: 280px;
+    }
+
+
+    .content-section {
+        width: 100%;
+
+        padding: 30px;
+    }
+}
+
+
+/* ========================================
+   Mobile Responsive Design
+   ======================================== */
+
+@media (max-width: 500px) {
+
+    main {
+        padding: 25px 15px;
+    }
+
+
+    .main-card {
+        border-radius: 12px;
+    }
+
+
+    .image-section {
+        height: 220px;
+
+        min-height: 220px;
+    }
+
+
+    .content-section {
+        padding: 25px 20px;
+    }
+
+
+    .content-section h2 {
+        font-size: 24px;
+    }
+
+
+    .button-group {
+        flex-direction: column;
+    }
+
+
+    .button-group button {
+        width: 100%;
+    }
+}
