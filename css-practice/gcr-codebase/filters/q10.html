@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard Summary</title>
+    <link rel="stylesheet" href="q10.css">
+</head>
+<body>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                Responsive Dashboard
+            </div>
+
+            <div class="user">
+                Welcome, Student
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Menu</h2>
+
+            <nav>
+                <a href="#">Dashboard</a>
+                <a href="#">Filters</a>
+                <a href="#">Typography</a>
+                <a href="#">Media Queries</a>
+                <a href="#">Cheat Sheet</a>
+            </nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="page-heading">
+                <h1>CSS Concepts</h1>
+                <p>
+                    Explore important responsive CSS techniques.
+                </p>
+            </div>
+
+            <!-- Dashboard Cards -->
+            <section class="cards">
+
+                <!-- Filters Card -->
+                <article class="dashboard-card">
+                    <div class="card-icon">🎨</div>
+
+                    <h2>Filters</h2>
+
+                    <p>
+                        CSS filters can modify the appearance of
+                        images using grayscale, blur, sepia and more.
+                    </p>
+
+                    <code>filter: grayscale(100%);</code>
+                </article>
+
+                <!-- Typography Card -->
+                <article class="dashboard-card">
+                    <div class="card-icon">Aa</div>
+
+                    <h2>Typography</h2>
+
+                    <p>
+                        Responsive typography allows text sizes to
+                        adapt automatically to different screens.
+                    </p>
+
+                    <code>font-size: clamp(1rem, 2vw, 2rem);</code>
+                </article>
+
+                <!-- Media Queries Card -->
+                <article class="dashboard-card">
+                    <div class="card-icon">📱</div>
+
+                    <h2>Media Queries</h2>
+
+                    <p>
+                        Media queries apply different styles based
+                        on screen size and device characteristics.
+                    </p>
+
+                    <code>@media (max-width: 750px)</code>
+                </article>
+
+                <!-- Cheat Sheet Card -->
+                <article class="dashboard-card">
+                    <div class="card-icon">📋</div>
+
+                    <h2>Cheat Sheet Links</h2>
+
+                    <p>
+                        Quick reference for Grid, Flexbox, filters,
+                        breakpoints and responsive design.
+                    </p>
+
+                    <a href="#">View Cheat Sheet</a>
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

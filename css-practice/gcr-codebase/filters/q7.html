@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Responsive Web Demo</title>
+    <link rel="stylesheet" href="q7.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            Responsive Web
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navigation">
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#cheatsheet">Cheat Sheet</a>
+        </nav>
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Image Gallery Section -->
+        <section class="section gallery-section" id="gallery">
+
+            <h1>Image Gallery</h1>
+
+            <div class="gallery">
+
+                <figure>
+                    <img
+                        src="https://picsum.photos/id/1015/500/350"
+                        alt="Mountain landscape">
+                    <figcaption>Responsive Image</figcaption>
+                </figure>
+
+                <figure>
+                    <img
+                        src="https://picsum.photos/id/1011/500/350"
+                        alt="Lake landscape">
+                    <figcaption>Flexible Media</figcaption>
+                </figure>
+
+                <figure>
+                    <img
+                        src="https://picsum.photos/id/1035/500/350"
+                        alt="River landscape">
+                    <figcaption>CSS Filters</figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+        <!-- Responsive Design Explanation -->
+        <section class="section explanation-section" id="about">
+
+            <h1>Responsive Design</h1>
+
+            <p>
+                Responsive web design allows a website to automatically
+                adapt to different screen sizes and devices.
+            </p>
+
+            <p>
+                CSS Grid and Flexbox can be used to create flexible
+                layouts. Media queries allow developers to change
+                the layout at specific breakpoints.
+            </p>
+
+            <p>
+                Relative units such as %, rem, vw and the clamp()
+                function help create flexible typography and spacing.
+            </p>
+
+        </section>
+
+        <!-- Cheat Sheet Preview -->
+        <section class="section cheat-section" id="cheatsheet">
+
+            <h1>CSS Cheat Sheet</h1>
+
+            <div class="cheat-grid">
+
+                <article class="cheat-box">
+                    <h2>Grid</h2>
+                    <p>Used for two-dimensional layouts.</p>
+                    <code>display: grid;</code>
+                </article>
+
+                <article class="cheat-box">
+                    <h2>Flexbox</h2>
+                    <p>Used for flexible row or column layouts.</p>
+                    <code>display: flex;</code>
+                </article>
+
+                <article class="cheat-box">
+                    <h2>Media Query</h2>
+                    <p>Changes styles according to screen size.</p>
+                    <code>@media (max-width: 700px)</code>
+                </article>
+
+                <article class="cheat-box">
+                    <h2>Typography</h2>
+                    <p>Creates flexible and responsive text.</p>
+                    <code>clamp(1rem, 2vw, 2rem)</code>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Email: contact@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>&copy; 2026 Responsive Web Demo</p>
+    </footer>
+
+</body>
+</html>

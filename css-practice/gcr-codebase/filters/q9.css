@@ -1,0 +1,215 @@
+/* =========================================
+   Reset
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   Body
+   ========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+    color: #222;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   Header
+   ========================================= */
+
+.header {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background-color: #222;
+    color: white;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   Main
+   ========================================= */
+
+main {
+    flex: 1;
+
+    max-width: 1200px;
+    width: 100%;
+
+    margin: auto;
+
+    padding: 50px 25px;
+}
+
+/* =========================================
+   Principles Grid
+   ========================================= */
+
+.principles {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+/* =========================================
+   Principle Box
+   ========================================= */
+
+.principle-box {
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15);
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Heading */
+
+.principle-box h2 {
+    margin-bottom: 18px;
+}
+
+/* Description */
+
+.principle-box p {
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   CSS Code Example
+   ========================================= */
+
+.code-example {
+    padding: 15px;
+
+    background-color: #eeeeee;
+
+    border-radius: 8px;
+
+    overflow-x: auto;
+}
+
+.code-example code {
+    font-family: monospace;
+
+    line-height: 1.6;
+}
+
+/* =========================================
+   Hover Effect
+   Background gradient + text change
+   ========================================= */
+
+.principle-box:hover {
+    background:
+        linear-gradient(135deg, #222, #555);
+
+    color: white;
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Keep code area readable on hover */
+
+.principle-box:hover .code-example {
+    background-color: #333;
+}
+
+.principle-box:hover .code-example code {
+    color: white;
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+
+.footer {
+    text-align: center;
+
+    padding: 20px;
+
+    background-color: #222;
+    color: white;
+}
+
+/* =========================================
+   Tablet
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .principles {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =========================================
+   Mobile
+   Below 600px
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .principles {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .principle-box {
+        padding: 25px;
+    }
+}
+
+/* =========================================
+   Extra Small Screens
+   ========================================= */
+
+@media (max-width: 450px) {
+
+    .header {
+        padding: 25px 15px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .principle-box {
+        padding: 20px;
+    }
+}

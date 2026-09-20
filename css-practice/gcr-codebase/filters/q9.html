@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Principles Summary</title>
+    <link rel="stylesheet" href="q9.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Responsive Design Principles</h1>
+        <p>Core concepts for building responsive websites</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="principles">
+
+            <!-- Fluid Layouts -->
+            <article class="principle-box">
+                <h2>Fluid Layouts</h2>
+
+                <p>
+                    Fluid layouts use flexible units such as percentages
+                    to allow content to adjust according to the screen size.
+                </p>
+
+                <div class="code-example">
+                    <code>
+                        .container {<br>
+                        &nbsp;&nbsp;width: 100%;<br>
+                        &nbsp;&nbsp;max-width: 1200px;<br>
+                        }
+                    </code>
+                </div>
+            </article>
+
+            <!-- Flexible Media -->
+            <article class="principle-box">
+                <h2>Flexible Media</h2>
+
+                <p>
+                    Flexible media allows images and videos to resize
+                    automatically so that they fit within their containers.
+                </p>
+
+                <div class="code-example">
+                    <code>
+                        img {<br>
+                        &nbsp;&nbsp;max-width: 100%;<br>
+                        &nbsp;&nbsp;height: auto;<br>
+                        }
+                    </code>
+                </div>
+            </article>
+
+            <!-- Breakpoints -->
+            <article class="principle-box">
+                <h2>Breakpoints</h2>
+
+                <p>
+                    Breakpoints allow CSS styles to change when the
+                    screen reaches a specific width.
+                </p>
+
+                <div class="code-example">
+                    <code>
+                        @media (max-width: 600px) {<br>
+                        &nbsp;&nbsp;.box {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+                        &nbsp;&nbsp;}<br>
+                        }
+                    </code>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Responsive Design Principles</p>
+    </footer>
+
+</body>
+</html>

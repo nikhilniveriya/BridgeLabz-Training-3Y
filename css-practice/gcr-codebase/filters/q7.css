@@ -1,0 +1,314 @@
+/* =========================================
+   Reset
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   Body
+   ========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   Header
+   ========================================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+
+    background-color: #222;
+    color: white;
+}
+
+/* Logo */
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    gap: 25px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #61dafb;
+}
+
+/* =========================================
+   Main Content
+   ========================================= */
+
+.main-content {
+    flex: 1;
+
+    display: grid;
+
+    /* Three main sections */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1300px;
+    width: 100%;
+
+    margin: auto;
+    padding: 40px 25px;
+
+    /* Fade-in animation */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* =========================================
+   Common Section
+   ========================================= */
+
+.section {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Section hover */
+
+.section:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section heading */
+
+.section > h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   Image Gallery
+   ========================================= */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+}
+
+.gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+/* Gallery hover */
+
+.gallery img:hover {
+    transform: scale(1.04);
+    filter: brightness(110%);
+}
+
+.gallery figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* =========================================
+   Explanation Section
+   ========================================= */
+
+.explanation-section p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   Cheat Sheet
+   ========================================= */
+
+.cheat-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.cheat-box {
+    padding: 18px;
+
+    background-color: #f1f1f1;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.cheat-box:hover {
+    transform: scale(1.04);
+    background-color: #e4f3ff;
+}
+
+.cheat-box h2 {
+    margin-bottom: 10px;
+}
+
+.cheat-box p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.cheat-box code {
+    display: block;
+
+    padding: 8px;
+
+    background-color: #ddd;
+
+    border-radius: 5px;
+
+    font-family: monospace;
+
+    overflow-wrap: break-word;
+}
+
+/* =========================================
+   Fade-in Animation
+   ========================================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+
+.footer {
+    text-align: center;
+
+    padding: 20px;
+
+    background-color: #222;
+    color: white;
+
+    line-height: 1.8;
+}
+
+/* =========================================
+   Responsive Design
+   Below 700px:
+   All sections stack vertically
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    /* Header becomes vertical */
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Main sections stack */
+
+    .main-content {
+        grid-template-columns: 1fr;
+
+        padding: 30px 15px;
+    }
+
+    /* Cheat sheet becomes one column */
+
+    .cheat-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   Extra Small Screens
+   ========================================= */
+
+@media (max-width: 450px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .section > h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,114 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 35px 20px;
+    background-color: #222;
+    color: white;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 25px;
+}
+
+/* Card container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* Cards */
+.card {
+    width: calc(25% - 19px);
+    padding: 30px 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    /* Smooth background transition */
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Card heading */
+.card h2 {
+    margin-bottom: 15px;
+}
+
+/* Card paragraph */
+.card p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Link */
+.card a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0066cc;
+}
+
+/* Hover effect */
+.card:hover {
+    background-color: #e8f4ff;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* =========================================
+   Tablet: Maximum width 900px
+   Two columns
+   ========================================= */
+@media (max-width: 900px) {
+
+    .card {
+        width: calc(50% - 13px);
+    }
+}
+
+/* =========================================
+   Mobile: Maximum width 600px
+   One column
+   ========================================= */
+@media (max-width: 600px) {
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

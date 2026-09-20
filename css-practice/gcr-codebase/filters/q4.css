@@ -1,0 +1,89 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+/* Typography section */
+.typography-section {
+    max-width: 900px;
+    text-align: center;
+    padding: 40px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive heading */
+.typography-section h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 25px;
+}
+
+/* Responsive paragraph */
+.typography-section p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    line-height: 1.7;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* =========================================
+   Mobile: Below 700px
+   Improve readability and spacing
+   ========================================= */
+@media (max-width: 700px) {
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .typography-section {
+        padding: 25px 20px;
+        margin: 10px auto;
+    }
+
+    .typography-section h1 {
+        margin-bottom: 18px;
+    }
+
+    .typography-section p {
+        line-height: 1.9;
+    }
+}

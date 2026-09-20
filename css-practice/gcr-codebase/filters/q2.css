@@ -1,0 +1,141 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #222;
+    color: white;
+}
+
+/* Logo */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    gap: 25px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #61dafb;
+}
+
+/* Main */
+main {
+    flex: 1;
+    padding: 50px 30px;
+}
+
+/* Feature boxes */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Individual box */
+.feature-box {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    /* Smooth hover transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Box heading */
+.feature-box h2 {
+    margin-bottom: 15px;
+}
+
+/* Box paragraph */
+.feature-box p {
+    line-height: 1.6;
+}
+
+/* Hover effect */
+.feature-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Tablet and mobile */
+@media (max-width: 750px) {
+
+    /* Stack feature boxes vertically */
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+
+    /* Header adjusts for smaller screens */
+    .header {
+        padding: 20px;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 500px) {
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+}
