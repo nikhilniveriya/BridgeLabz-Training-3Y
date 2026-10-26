@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Form Builder</title>
+</head>
+<body>
+    <h2>Dynamic Form Builder</h2>
+    <div id="formContainer"></div>
+    <pre id="output"></pre>
+
+    <script>
+        "use strict";
+
+        class FormBuilder {
+            constructor(fields, containerId) {
+                this.fields = fields;
+                this.container = document.getElementById(containerId);
+            }
+
+            createForm() {
+                // Build form fields dynamically
+                const fieldsHTML = this.fields.map(field => `
+                    <label for="${field.name}">${field.label}</label><br>
+                    <input
+                        type="${field.type}"
+                        id="${field.name}"
+                        name="${field.name}"
+                        required
+                    ><br><br>
+                `).join("");
+
+                this.container.innerHTML = `
+                    <form id="dynamicForm">
+                        ${fieldsHTML}
+                        <button type="submit">Submit</button>
+                    </form>
+                `;
+
+                document.getElementById("dynamicForm")
+                    .addEventListener("submit", event => {
+                        event.preventDefault();
+                        console.log(this.getFormData());
+                        document.getElementById("output").textContent =
+                            JSON.stringify(this.getFormData(), null, 2);
+                    });
+            }
+
+            getFormData() {
+                const formData = {};
+
+                for (const field of this.fields) {
+                    formData[field.name] =
+                        document.getElementById(field.name).value;
+                }
+
+                return formData;
+            }
+        }
+
+        const fields = [
+            { type: "text", label: "Username", name: "username" },
+            { type: "email", label: "Email", name: "email" },
+            { type: "password", label: "Password", name: "password" }
+        ];
+
+        const builder = new FormBuilder(fields, "formContainer");
+        builder.createForm();
+    </script>
+</body>
+</html>
