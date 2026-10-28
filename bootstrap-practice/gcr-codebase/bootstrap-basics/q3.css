@@ -1,0 +1,25 @@
+
+/* Product card hover effect */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+/* Lift the card when the mouse hovers over it */
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Keep all product images the same height */
+.product-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Responsive image height for mobile */
+@media (max-width: 576px) {
+    .product-card .card-img-top {
+        height: 230px;
+    }
+}

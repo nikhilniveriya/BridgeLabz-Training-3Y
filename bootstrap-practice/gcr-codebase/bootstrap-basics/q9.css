@@ -1,0 +1,36 @@
+
+/* Blog post card styling */
+.blog-post {
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.blog-post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Pagination link styling */
+.pagination .page-link {
+    color: #0d6efd;
+}
+
+/* Active page styling */
+.pagination .active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+}
+
+/* Pager button hover effect */
+.post-pager .btn {
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive pager alignment */
+@media (max-width: 576px) {
+    .post-pager .btn {
+        width: 100%;
+    }
+}

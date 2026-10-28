@@ -1,0 +1,27 @@
+
+/* Restaurant header background */
+.restaurant-header {
+    background: linear-gradient(135deg, #7b241c, #c0392b);
+}
+
+/* Improve the restaurant page appearance */
+body {
+    background-color: #fffdf9;
+}
+
+/* Food image styling */
+figure img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Table heading styling */
+.table thead th {
+    padding: 14px;
+}
+
+/* Smooth hover effect on menu rows */
+.table tbody tr {
+    transition: background-color 0.2s ease;
+}

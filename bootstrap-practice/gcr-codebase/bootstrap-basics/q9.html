@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog Pagination - Tech Blog</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="q9.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+            <h1 class="fw-bold">Tech Blog</h1>
+            <p class="mb-0">Latest news, tutorials and technology updates.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+
+        <!-- Blog Posts -->
+        <section>
+            <h2 class="text-center fw-bold mb-4">Latest Blog Posts</h2>
+
+            <div class="row g-4">
+
+                <!-- Blog Post 1 -->
+                <div class="col-md-6">
+                    <article class="blog-post border rounded p-4 h-100">
+                        <span class="badge text-bg-primary mb-2">
+                            Programming
+                        </span>
+
+                        <h3 class="h4">Learn Web Development</h3>
+
+                        <p class="text-secondary">
+                            Discover the basics of HTML, CSS and Bootstrap
+                            to create responsive websites.
+                        </p>
+
+                        <a href="#" class="btn btn-outline-primary">
+                            Read More
+                        </a>
+                    </article>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="col-md-6">
+                    <article class="blog-post border rounded p-4 h-100">
+                        <span class="badge text-bg-success mb-2">
+                            Technology
+                        </span>
+
+                        <h3 class="h4">Introduction to Cloud Computing</h3>
+
+                        <p class="text-secondary">
+                            Understand how cloud computing helps businesses
+                            store data and run applications online.
+                        </p>
+
+                        <a href="#" class="btn btn-outline-primary">
+                            Read More
+                        </a>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Pagination -->
+        <nav class="mt-5" aria-label="Blog page navigation">
+
+            <!-- Centered Bootstrap pagination -->
+            <ul class="pagination justify-content-center flex-wrap">
+
+                <li class="page-item">
+                    <a class="page-link" href="#">Previous</a>
+                </li>
+
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">1</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Older and Newer Posts Pager -->
+        <nav class="post-pager d-flex flex-column flex-sm-row
+                    justify-content-between gap-3 mt-4"
+             aria-label="Older and newer posts">
+
+            <a href="#" class="btn btn-outline-secondary">
+                &larr; Older Posts
+            </a>
+
+            <a href="#" class="btn btn-outline-secondary">
+                Newer Posts &rarr;
+            </a>
+
+        </nav>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">
+            &copy; 2026 Tech Blog. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

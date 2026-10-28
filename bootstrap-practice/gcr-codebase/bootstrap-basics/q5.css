@@ -1,0 +1,54 @@
+
+/* Custom Bootstrap theme variables */
+:root {
+    --bs-primary: #7257a8;
+    --bs-primary-rgb: 114, 87, 168;
+    --bs-font-sans-serif: 'Poppins', sans-serif;
+}
+
+/* Apply custom font and page background */
+body {
+    font-family: var(--bs-font-sans-serif);
+    background-color: #faf8ff;
+}
+
+/* Custom header and footer theme */
+.blog-header,
+.blog-footer {
+    background-color: #eae2f8;
+    color: #49356f;
+}
+
+/* Blog card styling */
+.blog-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Blog image */
+.blog-card .card-img-top {
+    height: 230px;
+    object-fit: cover;
+}
+
+/* Custom badge color */
+.blog-card .badge {
+    background-color: #eae2f8;
+    color: #49356f;
+}
+
+/* Custom Bootstrap primary button */
+.btn-primary {
+    --bs-btn-bg: #7257a8;
+    --bs-btn-border-color: #7257a8;
+    --bs-btn-hover-bg: #5b438c;
+    --bs-btn-hover-border-color: #5b438c;
+}

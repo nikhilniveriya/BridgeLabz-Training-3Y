@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Tracker</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="q7.css">
+</head>
+<body class="bg-light">
+
+    <!-- Header -->
+    <header class="bg-primary text-white py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <h1 class="h2 mb-1">My Task Tracker</h1>
+                <p class="mb-0">Organize your daily work</p>
+            </div>
+
+            <!-- Pending task counter badge -->
+            <span class="badge text-bg-light text-primary fs-6">
+                Pending: 3
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+
+        <section class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <h2 class="fw-bold mb-4">Today's Tasks</h2>
+
+                <!-- Bootstrap List Group -->
+                <ul class="list-group shadow-sm">
+
+                    <!-- High Priority Task -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <div>
+                            <h3 class="h6 mb-1">Complete DBMS Assignment</h3>
+                            <small class="text-secondary">Deadline: Today</small>
+                        </div>
+
+                        <span class="badge text-bg-danger rounded-pill">
+                            High
+                        </span>
+                    </li>
+
+                    <!-- Medium Priority Task -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <div>
+                            <h3 class="h6 mb-1">Practice Java Programs</h3>
+                            <small class="text-secondary">Deadline: Tomorrow</small>
+                        </div>
+
+                        <span class="badge text-bg-warning rounded-pill">
+                            Medium
+                        </span>
+                    </li>
+
+                    <!-- Low Priority Task -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                        <div>
+                            <h3 class="h6 mb-1">Organize Study Notes</h3>
+                            <small class="text-secondary">Deadline: This Week</small>
+                        </div>
+
+                        <span class="badge text-bg-success rounded-pill">
+                            Low
+                        </span>
+                    </li>
+
+                </ul>
+
+                <!-- Completed Button with Badge -->
+                <div class="card mt-4 shadow-sm">
+                    <div class="card-body d-flex flex-wrap justify-content-between align-items-center gap-3">
+                        <div>
+                            <h3 class="h5 mb-1">Completed Tasks</h3>
+                            <p class="text-secondary mb-0">
+                                Keep track of your progress.
+                            </p>
+                        </div>
+
+                        <button type="button" class="btn btn-success">
+                            Completed
+                            <span class="badge text-bg-light text-success ms-1">
+                                2
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">
+            &copy; 2026 My Task Tracker. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+nav {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+section {
+    min-height: 300px;
+    padding: 40px 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.about {
+    background-image:
+        linear-gradient(rgba(255,255,255,0.85),
+                        rgba(255,255,255,0.85)),
+        url("https://placehold.co/1200x600");
+}
+
+.places {
+    background: radial-gradient(circle, #fff3cd, #ffcc80);
+}
+
+.culture {
+    background-image:
+        linear-gradient(rgba(230,240,255,0.85),
+                        rgba(230,240,255,0.85)),
+        url("https://placehold.co/1200x600");
+    background-attachment: fixed;
+}
+
+h2 {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 25px 15px;
+        background-attachment: scroll;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+}

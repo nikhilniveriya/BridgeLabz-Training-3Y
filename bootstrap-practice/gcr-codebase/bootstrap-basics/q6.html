@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications Dashboard</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="q6.css">
+</head>
+<body class="bg-light">
+
+    <!-- Header -->
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+            <h1 class="h3 mb-0">Notifications Dashboard</h1>
+            <p class="mb-0 mt-2">Stay updated with your latest activities.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+
+                <h2 class="fw-bold mb-4">Your Notifications</h2>
+
+                <!-- Notifications Card -->
+                <section class="card shadow-sm">
+                    <div class="card-header bg-white">
+                        <h3 class="h5 mb-0">Recent Updates</h3>
+                    </div>
+
+                    <div class="card-body p-4">
+
+                        <!-- Success Alert -->
+                        <div class="alert alert-success" role="alert">
+                            <strong>Success!</strong>
+                            Your profile has been updated successfully.
+                        </div>
+
+                        <!-- Info Alert -->
+                        <div class="alert alert-info" role="alert">
+                            <strong>Information:</strong>
+                            Remember to save your work regularly.
+                        </div>
+
+                        <!-- Danger Alert -->
+                        <div class="alert alert-danger" role="alert">
+                            <strong>Warning!</strong>
+                            Your password will expire soon. Please update it.
+                        </div>
+
+                        <!-- Dismissible Alert -->
+                        <div class="alert alert-warning alert-dismissible fade show"
+                             role="alert">
+                            <strong>Reminder!</strong>
+                            Your project submission is due tomorrow.
+
+                            <button type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="alert"
+                                    aria-label="Close">
+                            </button>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Summary Well -->
+                <section class="summary-well bg-light border rounded p-4 mt-4">
+                    <h3 class="h5 fw-bold mb-3">Notification Summary</h3>
+
+                    <div class="row g-3 text-center">
+
+                        <div class="col-4">
+                            <div class="summary-item p-3 bg-white rounded">
+                                <h4 class="text-primary">4</h4>
+                                <p class="mb-0">Total Alerts</p>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="summary-item p-3 bg-white rounded">
+                                <h4 class="text-success">2</h4>
+                                <p class="mb-0">Completed</p>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="summary-item p-3 bg-white rounded">
+                                <h4 class="text-danger">1</h4>
+                                <p class="mb-0">Important</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">
+            &copy; 2026 Notifications Dashboard. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- Bootstrap JavaScript for dismissible alert -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

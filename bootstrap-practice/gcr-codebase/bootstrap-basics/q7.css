@@ -1,0 +1,34 @@
+
+/* Task list item styling */
+.list-group-item {
+    border-color: #e5e7eb;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on tasks */
+.list-group-item:hover {
+    background-color: #f8faff;
+}
+
+/* Task card styling */
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+/* Completed button hover effect */
+.btn-success {
+    transition: transform 0.2s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive header */
+@media (max-width: 576px) {
+    header .container {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+}

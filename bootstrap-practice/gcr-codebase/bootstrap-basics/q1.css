@@ -1,0 +1,21 @@
+
+/* Custom background for the hero section */
+.hero {
+    background: linear-gradient(135deg, #eef5ff, #ffffff);
+}
+
+/* Add a smooth hover effect to service cards */
+.service-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive image */
+.hero img {
+    width: 100%;
+    height: auto;
+}

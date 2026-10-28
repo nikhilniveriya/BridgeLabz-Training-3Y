@@ -1,0 +1,35 @@
+
+/* Profile image styling */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #0d6efd;
+}
+
+/* Portfolio header */
+header .bg-white {
+    border-radius: 15px;
+}
+
+/* About section */
+main section p {
+    line-height: 1.8;
+}
+
+/* Button hover effects */
+.btn {
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive profile image */
+@media (max-width: 576px) {
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+}
