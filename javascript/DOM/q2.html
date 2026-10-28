@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Character Counter</title>
+<style>
+body { font-family: Arial; margin: 30px; }
+textarea { width: 350px; height: 130px; padding: 10px; }
+#counter { color: green; font-weight: bold; }
+#counter.warning { color: #d49b00; }
+#counter.danger { color: red; }
+</style>
+</head>
+<body>
+<h2>Live Character Counter</h2>
+
+<textarea id="message" placeholder="Write up to 100 characters..."></textarea>
+<p id="counter" aria-live="polite">100 characters remaining</p>
+<button id="resetButton">Reset</button>
+
+<script>
+const message = document.getElementById("message");
+const counter = document.getElementById("counter");
+const resetButton = document.getElementById("resetButton");
+const maxCharacters = 100;
+
+function updateCounter() {
+    const remaining = maxCharacters - message.value.length;
+
+    counter.textContent = remaining + " characters remaining";
+    counter.classList.toggle("warning", remaining <= 20 && remaining > 0);
+    counter.classList.toggle("danger", remaining === 0);
+}
+
+message.addEventListener("beforeinput", (event) => {
+    if (event.inputType.startsWith("delete")) return;
+
+    const insertedText = event.data ??
+        event.dataTransfer?.getData("text/plain") ?? "";
+
+    if (message.value.length + insertedText.length > maxCharacters) {
+        event.preventDefault();
+    }
+});
+
+message.addEventListener("input", updateCounter);
+
+resetButton.addEventListener("click", () => {
+    message.value = "";
+    updateCounter();
+});
+
+updateCounter();
+</script>
+</body>
+</html>

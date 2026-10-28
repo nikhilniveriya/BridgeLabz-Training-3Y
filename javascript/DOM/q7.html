@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mouse Coordinates Logger</title>
+<style>
+body { font-family: Arial; margin: 30px; }
+#mouseBox {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    background: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    cursor: crosshair;
+}
+#coordinates { font-weight: bold; }
+.dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+</style>
+</head>
+<body>
+<h2>Mouse Path & Coordinates</h2>
+
+<div id="mouseBox"></div>
+<p id="coordinates">Client X: -, Client Y: -</p>
+<p>Move the mouse inside the box. Double-click to place a red dot.</p>
+
+<script>
+const mouseBox = document.getElementById("mouseBox");
+const coordinates = document.getElementById("coordinates");
+
+mouseBox.addEventListener("mousemove", (event) => {
+    coordinates.textContent =
+        `Client X: ${event.clientX}, Client Y: ${event.clientY}`;
+});
+
+mouseBox.addEventListener("dblclick", (event) => {
+    const boxRect = mouseBox.getBoundingClientRect();
+    const x = event.clientX - boxRect.left;
+    const y = event.clientY - boxRect.top;
+
+    const dot = document.createElement("div");
+    dot.className = "dot";
+    dot.style.left = x + "px";
+    dot.style.top = y + "px";
+
+    mouseBox.appendChild(dot);
+});
+</script>
+</body>
+</html>

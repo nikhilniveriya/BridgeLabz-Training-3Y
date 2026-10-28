@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product List Manager</title>
+<style>
+body { font-family: Arial; margin: 30px; }
+input { padding: 10px; }
+button { padding: 8px; margin: 4px; cursor: pointer; }
+li { margin: 12px 0; }
+</style>
+</head>
+<body>
+<h2>Dynamic Product List Manager</h2>
+
+<input id="productInput" placeholder="Enter product name">
+<button id="addButton">Add Product</button>
+<ul id="productList"></ul>
+
+<script>
+const productInput = document.getElementById("productInput");
+const addButton = document.getElementById("addButton");
+const productList = document.getElementById("productList");
+
+let editingItem = null;
+
+function saveEdit() {
+    if (!editingItem) return;
+
+    const input = editingItem.querySelector(".editInput");
+    const name = input.value.trim();
+
+    if (name) {
+        const nameSpan = document.createElement("span");
+        nameSpan.className = "productName";
+        nameSpan.textContent = name;
+        input.replaceWith(nameSpan);
+    } else {
+        editingItem.remove();
+    }
+
+    editingItem = null;
+}
+
+function addProduct() {
+    const name = productInput.value.trim();
+    if (!name) return;
+
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    span.className = "productName";
+    span.textContent = name;
+
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+    editButton.dataset.action = "edit";
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.dataset.action = "delete";
+
+    li.append(span, editButton, deleteButton);
+    productList.appendChild(li);
+    productInput.value = "";
+}
+
+addButton.addEventListener("click", addProduct);
+
+productInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") addProduct();
+});
+
+productList.addEventListener("click", (event) => {
+    const button = event.target.closest("button");
+    if (!button || !productList.contains(button)) return;
+
+    const li = button.closest("li");
+
+    if (button.dataset.action === "delete") {
+        if (editingItem === li) editingItem = null;
+        li.remove();
+    }
+
+    if (button.dataset.action === "edit") {
+        if (editingItem) saveEdit();
+
+        const span = li.querySelector(".productName");
+        const input = document.createElement("input");
+        input.className = "editInput";
+        input.value = span.textContent;
+
+        span.replaceWith(input);
+        editingItem = li;
+        input.focus();
+        input.select();
+    }
+});
+
+document.addEventListener("click", (event) => {
+    if (editingItem && !editingItem.contains(event.target)) {
+        saveEdit();
+    }
+});
+
+productList.addEventListener("keydown", (event) => {
+    if (!event.target.matches(".editInput")) return;
+
+    if (event.key === "Enter") saveEdit();
+
+    if (event.key === "Escape") {
+        const li = editingItem;
+        const span = document.createElement("span");
+        span.className = "productName";
+        span.textContent = li.querySelector(".editInput").defaultValue;
+        li.querySelector(".editInput").replaceWith(span);
+        editingItem = null;
+    }
+});
+</script>
+</body>
+</html>

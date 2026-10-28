@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Multi-Step Form</title>
+<style>
+body { font-family: Arial; margin: 30px; }
+.step { display: none; }
+.step.active { display: block; }
+input { display: block; padding: 10px; margin: 10px 0; }
+button { padding: 8px 16px; margin-right: 8px; }
+#error { color: red; }
+</style>
+</head>
+<body>
+<h2>Registration Form</h2>
+
+<form id="multiStepForm">
+    <div class="step active">
+        <h3>Step 1: Name</h3>
+        <input id="name" placeholder="Enter your name" required>
+    </div>
+
+    <div class="step">
+        <h3>Step 2: Email</h3>
+        <input id="email" type="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="step">
+        <h3>Step 3: Password</h3>
+        <input id="password" type="password"
+               placeholder="Minimum 6 characters"
+               minlength="6" required>
+    </div>
+
+    <p id="error" role="alert"></p>
+    <button type="button" id="backButton" hidden>Back</button>
+    <button type="button" id="nextButton">Next</button>
+</form>
+
+<div id="summary" hidden>
+    <h3>Registration Summary</h3>
+    <p id="summaryName"></p>
+    <p id="summaryEmail"></p>
+    <p>Password: Submitted (hidden for security)</p>
+</div>
+
+<script>
+const steps = document.querySelectorAll(".step");
+const backButton = document.getElementById("backButton");
+const nextButton = document.getElementById("nextButton");
+const error = document.getElementById("error");
+const summary = document.getElementById("summary");
+const form = document.getElementById("multiStepForm");
+
+let currentStep = 0;
+
+function showStep() {
+    steps.forEach((step, index) => {
+        step.classList.toggle("active", index === currentStep);
+    });
+
+    backButton.hidden = currentStep === 0;
+    nextButton.textContent =
+        currentStep === steps.length - 1 ? "Submit" : "Next";
+    error.textContent = "";
+}
+
+function validateCurrentStep() {
+    const input = steps[currentStep].querySelector("input");
+
+    if (!input.checkValidity()) {
+        input.reportValidity();
+        return false;
+    }
+
+    return true;
+}
+
+nextButton.addEventListener("click", () => {
+    if (!validateCurrentStep()) return;
+
+    if (currentStep < steps.length - 1) {
+        currentStep++;
+        showStep();
+    } else {
+        form.hidden = true;
+        summary.hidden = false;
+
+        document.getElementById("summaryName").textContent =
+            "Name: " + document.getElementById("name").value;
+
+        document.getElementById("summaryEmail").textContent =
+            "Email: " + document.getElementById("email").value;
+    }
+});
+
+backButton.addEventListener("click", () => {
+    if (currentStep > 0) {
+        currentStep--;
+        showStep();
+    }
+});
+
+showStep();
+</script>
+</body>
+</html>

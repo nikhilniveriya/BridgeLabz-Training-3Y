@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Theme Switcher</title>
+<style>
+body {
+    font-family: Arial;
+    margin: 30px;
+    padding: 30px;
+    transition: 0.3s;
+}
+body.light { background: white; color: #222; }
+body.dark { background: #222; color: white; }
+body.blue { background: #dceeff; color: #003366; }
+button { padding: 10px; margin: 5px; cursor: pointer; }
+</style>
+</head>
+<body data-theme="light" class="light">
+<h2>Theme Switcher</h2>
+<p>Choose a theme for this page.</p>
+
+<button data-theme-choice="light">Light</button>
+<button data-theme-choice="dark">Dark</button>
+<button data-theme-choice="blue">Blue</button>
+
+<p id="themeStatus">Current theme: Light</p>
+
+<script>
+const themeButtons = document.querySelectorAll("[data-theme-choice]");
+const themeStatus = document.getElementById("themeStatus");
+
+function applyTheme(theme) {
+    document.body.setAttribute("class", theme);
+    document.body.setAttribute("data-theme", theme);
+
+    themeStatus.textContent =
+        "Current theme: " + theme.charAt(0).toUpperCase() + theme.slice(1);
+}
+
+themeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        applyTheme(button.getAttribute("data-theme-choice"));
+    });
+});
+
+applyTheme(document.body.getAttribute("data-theme"));
+</script>
+</body>
+</html>

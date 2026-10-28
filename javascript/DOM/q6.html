@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Table Filter</title>
+<style>
+body { font-family: Arial; margin: 30px; }
+input { padding: 10px; width: 280px; margin-bottom: 15px; }
+table { border-collapse: collapse; width: 100%; max-width: 600px; }
+th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+th { background: #eee; }
+#noResults { color: red; }
+</style>
+</head>
+<body>
+<h2>Student Records</h2>
+
+<input id="searchInput" type="text"
+       placeholder="Search name, branch or CGPA">
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Branch</th>
+            <th>CGPA</th>
+        </tr>
+    </thead>
+    <tbody id="studentTable">
+        <tr><td>Arpit</td><td>CSE</td><td>8.5</td></tr>
+        <tr><td>Rahul</td><td>ECE</td><td>7.8</td></tr>
+        <tr><td>Priya</td><td>IT</td><td>9.1</td></tr>
+        <tr><td>Aman</td><td>CSE</td><td>8.0</td></tr>
+        <tr><td>Neha</td><td>ME</td><td>7.5</td></tr>
+    </tbody>
+</table>
+
+<p id="noResults" hidden>No results found</p>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const studentTable = document.getElementById("studentTable");
+const noResults = document.getElementById("noResults");
+
+searchInput.addEventListener("input", () => {
+    const searchText = searchInput.value.trim().toLowerCase();
+    const rows = studentTable.querySelectorAll("tr");
+    let visibleCount = 0;
+
+    rows.forEach((row) => {
+        const rowText = row.textContent.toLowerCase();
+        const matches = rowText.includes(searchText);
+
+        row.hidden = !matches;
+
+        if (matches) visibleCount++;
+    });
+
+    noResults.hidden = visibleCount !== 0;
+});
+</script>
+</body>
+</html>

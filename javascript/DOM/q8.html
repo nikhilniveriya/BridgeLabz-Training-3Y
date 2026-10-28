@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Custom Dropdown</title>
+<style>
+body { font-family: Arial; margin: 30px; }
+#dropdown { position: relative; display: inline-block; }
+button { padding: 10px 16px; cursor: pointer; }
+#options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 8px #ccc;
+    z-index: 1;
+}
+#options.open { display: block; }
+.option {
+    padding: 10px;
+    cursor: pointer;
+}
+.option:hover { background: #eee; }
+</style>
+</head>
+<body>
+<h2>Custom Dropdown</h2>
+
+<div id="dropdown">
+    <button id="dropdownButton" aria-expanded="false">
+        Select a fruit
+    </button>
+
+    <div id="options" role="listbox">
+        <div class="option" role="option" tabindex="0">Apple</div>
+        <div class="option" role="option" tabindex="0">Banana</div>
+        <div class="option" role="option" tabindex="0">Mango</div>
+        <div class="option" role="option" tabindex="0">Orange</div>
+    </div>
+</div>
+
+<script>
+const dropdown = document.getElementById("dropdown");
+const dropdownButton = document.getElementById("dropdownButton");
+const options = document.getElementById("options");
+
+function closeDropdown() {
+    options.classList.remove("open");
+    dropdownButton.setAttribute("aria-expanded", "false");
+}
+
+dropdownButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+
+    const isOpen = options.classList.toggle("open");
+    dropdownButton.setAttribute("aria-expanded", String(isOpen));
+});
+
+options.addEventListener("click", (event) => {
+    const option = event.target.closest(".option");
+    if (!option) return;
+
+    dropdownButton.textContent = option.textContent;
+    closeDropdown();
+});
+
+document.addEventListener("click", (event) => {
+    if (!dropdown.contains(event.target)) {
+        closeDropdown();
+    }
+}, true);
+
+options.addEventListener("keydown", (event) => {
+    if (
+        event.target.classList.contains("option") &&
+        (event.key === "Enter" || event.key === " ")
+    ) {
+        event.preventDefault();
+        dropdownButton.textContent = event.target.textContent;
+        closeDropdown();
+        dropdownButton.focus();
+    }
+});
+</script>
+</body>
+</html>
